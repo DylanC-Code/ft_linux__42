@@ -10,6 +10,7 @@ p
 
 +1M
 Y
+a
 n
 p
 2
@@ -27,8 +28,6 @@ p
 
 +25G
 Y
-a
-1
 p
 w
 EOF
@@ -39,3 +38,4 @@ EOF
 sudo mkfs.ext4 -L LFS_ROOT "${LFS_DISK}4" << EOF
 y
 EOF
+sudo mkswap "${LFS_DISK}3"
