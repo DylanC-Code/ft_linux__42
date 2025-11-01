@@ -23,7 +23,7 @@ p
 +2G
 Y
 n
-e
+p
 
 +25G
 Y
@@ -31,4 +31,11 @@ a
 1
 p
 w
+EOF
+
+sudo mkfs.ext2 -L LFS_BOOT "${LFS_DISK}2" << EOF
+y
+EOF
+sudo mkfs.ext4 -L LFS_ROOT "${LFS_DISK}4" << EOF
+y
 EOF
