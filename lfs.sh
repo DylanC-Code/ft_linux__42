@@ -36,10 +36,11 @@ esac
 
 
 
-cp -rf *.sh packages.csv patches.csv compiling_cross-toolchain "$LFS/sources"
+cp -rf *.sh packages.csv patches.csv compiling_cross-toolchain cross_compiling_tmp_tools "$LFS/sources"
 cd "$LFS/sources"
 export PATH="$LFS/tools/bin:$PATH"
 
 
 source download.sh
-source compiling_cross-toolchain/compiling_cross-toolchain.sh
+# source compiling_cross-toolchain/compiling_cross-toolchain.sh
+source cross_compiling_tmp_tools/cross_compiling_tmp_tools.sh

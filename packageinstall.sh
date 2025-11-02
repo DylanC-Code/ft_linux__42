@@ -5,11 +5,16 @@ PACKAGE=$2
 
 
 cat "$LFS/sources/packages.csv" | grep -i "^$PACKAGE;" | grep -i -v "\.patch;" | while read line; do
+    echo TEUBB ============= "$line"
     export VERSION="`echo $line | cut -d\; -f2`"
     URL="`echo $line | cut -d\; -f3 | sed "s/@/$VERSION/g"`"
     CACHEFILE="$(basename "$URL")"
-    DIRNAME="$(echo "$CACHEFILE" | sed "s/\(.*\)\.tar\..*/\1/")"
+    DIRNAME="$(echo "$CACHEFILE" | sed -E "s/(.*)\.(tar\..*|tgz)/\1/")"
 
+    if [ -d "$DIRNAME" ]; then
+        rm -rf "$DIRNAME"
+    fi
+    
     mkdir -pv "$DIRNAME"
 
     echo "Extracting $CACHEFILE"
