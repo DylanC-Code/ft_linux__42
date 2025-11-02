@@ -31,9 +31,10 @@ esac
 
 
 
-cp -rf *.sh packages.csv "$LFS/sources"
+cp -rf *.sh packages.csv compiling_cross-toolchain "$LFS/sources"
 cd "$LFS/sources"
 export PATH="$LFS/tools/bin:$PATH"
 
 
 source download.sh
+source compiling_cross-toolchain/compiling_cross-toolchain.sh
