@@ -1,17 +1,15 @@
 #!/bin/bash
 
-# mkdir -v build
-# cd build
+mkdir -v build
+cd build
 
-# ../configure --prefix=$LFS/tools \
-#     --with-sysroot=$LFS \
-#     --target=$LFS_TGT \
-#     --disable-nls \
-#     --enable-gprofng=no \
-#     --disable-werror \
-#     --enable-new-dtags \
-#     --enable-default-hash-style=gnu \
-# && make \
-# && make install
-
-source $LFS/sources/packageinstall.sh
+../configure --prefix=$LFS/tools \
+    --with-sysroot=$LFS \
+    --target=$LFS_TGT \
+    --disable-nls \
+    --enable-gprofng=no \
+    --disable-werror \
+    --enable-new-dtags \
+    --enable-default-hash-style=gnu \
+&& make \
+&& make install
