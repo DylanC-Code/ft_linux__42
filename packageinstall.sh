@@ -5,7 +5,7 @@ PACKAGE=$2
 
 
 cat "$LFS/sources/packages.csv" | grep -i "^$PACKAGE;" | grep -i -v "\.patch;" | while read line; do
-    VERSION="`echo $line | cut -d\; -f2`"
+    export VERSION="`echo $line | cut -d\; -f2`"
     URL="`echo $line | cut -d\; -f3 | sed "s/@/$VERSION/g"`"
     CACHEFILE="$(basename "$URL")"
     DIRNAME="$(echo "$CACHEFILE" | sed "s/\(.*\)\.tar\..*/\1/")"
@@ -13,7 +13,7 @@ cat "$LFS/sources/packages.csv" | grep -i "^$PACKAGE;" | grep -i -v "\.patch;" |
     mkdir -pv "$DIRNAME"
 
     echo "Extracting $CACHEFILE"
-    # tar -xf "$CACHEFILE" -C "$DIRNAME"
+    tar -xf "$CACHEFILE" -C "$DIRNAME"
 
     pushd "$DIRNAME"
 
