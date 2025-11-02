@@ -1,0 +1,7 @@
+bzip2-documentation-patch;1.0.8;https://www.linuxfromscratch.org/patches/lfs/12.4/bzip2-@-install_docs-1.patch;6a5ac7e89b791aae556de0f745916f7f
+coreutils-upstream-fix-patch;9.7;https://www.linuxfromscratch.org/patches/lfs/12.4/coreutils-@-upstream_fix-1.patch;96382a5aa85d6651a74f94ffb61785d9
+coreutils-i18n-fixes-patch;9.7;https://www.linuxfromscratch.org/patches/lfs/12.4/coreutils-@-i18n-1.patch;33ebfad32b2dfb8417c3335c08671206
+expect-gcc15-patch;5.45.4;https://www.linuxfromscratch.org/patches/lfs/12.4/expect-@-gcc15-1.patch;0ca4d6bb8d572fbcdb13cb36cd34833e
+glibc-fhs-patch;2.42;https://www.linuxfromscratch.org/patches/lfs/12.4/glibc-@-fhs-1.patch;9a5997c3452909b1769918c759eff8a2
+kbd-backspace-delete-fix-patch;2.8.0;https://www.linuxfromscratch.org/patches/lfs/12.4/kbd-@-backspace-1.patch;f75cca16a38da6caa7d52151f7136895
+sysvinit-consolidated-patch;3.14;https://www.linuxfromscratch.org/patches/lfs/12.4/sysvinit-@-consolidated-1.patch;3af8fd8e13cad481eeeaa48be4247445
