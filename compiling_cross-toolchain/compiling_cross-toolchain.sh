@@ -5,4 +5,7 @@ PACKAGES_DIRECTORY=compiling_cross-toolchain
 
 echo "Compiling cross-toolchain"
 
-source $PACKAGE_INSTALLER $PACKAGES_DIRECTORY binutils
+for package in binutils gcc linux-api-headers glibc libstdc++; do
+    source $PACKAGE_INSTALLER $PACKAGES_DIRECTORY $package
+done
+
