@@ -5,7 +5,6 @@ PACKAGE=$2
 
 
 cat "$LFS/sources/packages.csv" | grep -i "^$PACKAGE;" | grep -i -v "\.patch;" | while read line; do
-    echo TEUBB ============= "$line"
     export VERSION="`echo $line | cut -d\; -f2`"
     URL="`echo $line | cut -d\; -f3 | sed "s/@/$VERSION/g"`"
     CACHEFILE="$(basename "$URL")"

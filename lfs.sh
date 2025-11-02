@@ -42,5 +42,5 @@ export PATH="$LFS/tools/bin:$PATH"
 
 
 source download.sh
-# source compiling_cross-toolchain/compiling_cross-toolchain.sh
+source compiling_cross-toolchain/compiling_cross-toolchain.sh
 source cross_compiling_tmp_tools/cross_compiling_tmp_tools.sh
