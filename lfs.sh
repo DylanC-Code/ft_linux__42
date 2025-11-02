@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if source version-check.sh | grep "ERROR"; then
+    echo "Version check failed, aborting."
+    exit 1
+fi 
+
 export LFS=/mnt/lfs
 export LFS_TGT=x86_64-lfs-linux-gnu
 export LFS_DISK=/dev/sda
