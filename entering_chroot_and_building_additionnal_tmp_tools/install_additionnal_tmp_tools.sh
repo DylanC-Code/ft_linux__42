@@ -13,8 +13,6 @@ fi
 cd /sources
 
 
-# for package in gettext bison perl python texinfo util-linux; do
-#     source $PACKAGE_INSTALLER $PACKAGES_DIRECTORY $package
-# done
-
-source $PACKAGE_INSTALLER $PACKAGES_DIRECTORY gettext
+for package in gettext bison perl python texinfo util-linux; do
+    source $PACKAGE_INSTALLER $PACKAGES_DIRECTORY $package
+done
