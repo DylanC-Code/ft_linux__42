@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir build
+
 pushd build
   ../configure --disable-bzlib      \
               --disable-libseccomp \

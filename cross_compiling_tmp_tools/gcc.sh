@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -pv mpfr gmp mpc
+
 tar -xf ../mpfr-*.tar.xz -C mpfr --strip-components=1
 tar -xf ../gmp-*.tar.xz -C gmp --strip-components=1
 tar -xf ../mpc-*.tar.gz -C mpc --strip-components=1
@@ -42,4 +44,4 @@ cd       build
 make
 make DESTDIR=$LFS install
 
-ln -sfv gcc $LFS/usr/bin/cc
+ln -sv gcc $LFS/usr/bin/cc

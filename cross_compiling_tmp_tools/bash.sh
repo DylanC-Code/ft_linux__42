@@ -9,4 +9,4 @@ make
 make DESTDIR=$LFS install
 
 
-ln -sfv bash $LFS/bin/sh
+ln -sv bash $LFS/bin/sh
