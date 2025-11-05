@@ -4,7 +4,7 @@ mkdir -v build
 cd build
 
 
-./libstdc++-v3/configure \
+../libstdc++-v3/configure \
     --host=$LFS_TGT \
     --build=$(../config.guess) \
     --prefix=/usr \
