@@ -23,9 +23,10 @@ echo "rootsbindir=/usr/sbin" > configparms
     --build=$(../scripts/config.guess) \
     --disable-nscd \
     libc_cv_slibdir=/usr/lib \
-    --enable-kernel=5.4 \
-&& make \
-&& make DESTDIR=$LFS install
+    --enable-kernel=5.4 
+    
+make 
+make DESTDIR=$LFS install
 
 
 sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd

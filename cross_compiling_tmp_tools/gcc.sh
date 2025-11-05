@@ -37,8 +37,9 @@ cd       build
     --disable-libssp           \
     --disable-libvtv           \
     --enable-languages=c,c++   \
-    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc \
-    && make \
-    && make DESTDIR=$LFS install
+    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc
+    
+make
+make DESTDIR=$LFS install
 
 ln -sfv gcc $LFS/usr/bin/cc

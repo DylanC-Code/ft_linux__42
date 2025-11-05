@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $LFS/sources
+
 cat packages.csv | while read line; do
     NAME="`echo  $line | cut -d\; -f1`"
     VERSION="`echo  $line | cut -d\; -f2`"

@@ -10,6 +10,7 @@ cd build
     --enable-gprofng=no \
     --disable-werror \
     --enable-new-dtags \
-    --enable-default-hash-style=gnu \
-&& make \
-&& make install
+    --enable-default-hash-style=gnu
+
+make
+make install

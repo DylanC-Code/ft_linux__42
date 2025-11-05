@@ -19,9 +19,10 @@ popd
             --without-debug              \
             --without-ada                \
             --disable-stripping          \
-            AWK=gawk \
-&& make \
-&& make DESTDIR=$LFS install
+            AWK=gawk
+            
+make 
+make DESTDIR=$LFS install
 
 ln -sfv libncursesw.so $LFS/usr/lib/libncurses.so
 sed -e 's/^#if.*XOPEN.*$/#if 1/' \

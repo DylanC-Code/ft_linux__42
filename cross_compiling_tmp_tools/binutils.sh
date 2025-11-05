@@ -17,8 +17,9 @@ cd       build
     --disable-werror           \
     --enable-64-bit-bfd        \
     --enable-new-dtags         \
-    --enable-default-hash-style=gnu \
-    && make \
-    && make DESTDIR=$LFS install
+    --enable-default-hash-style=gnu
+
+make
+make DESTDIR=$LFS install
 
 rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}

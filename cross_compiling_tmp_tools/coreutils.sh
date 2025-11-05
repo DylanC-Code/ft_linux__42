@@ -4,9 +4,10 @@
             --host=$LFS_TGT                   \
             --build=$(build-aux/config.guess) \
             --enable-install-program=hostname \
-            --enable-no-install-program=kill,uptime \
-&& make \
-&& make DESTDIR=$LFS install
+            --enable-no-install-program=kill,uptime
+            
+make 
+make DESTDIR=$LFS install
 
 mv -v $LFS/usr/bin/chroot              $LFS/usr/sbin
 mkdir -pv $LFS/usr/share/man/man8
