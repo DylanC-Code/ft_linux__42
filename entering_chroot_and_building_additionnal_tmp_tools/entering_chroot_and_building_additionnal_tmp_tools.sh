@@ -7,7 +7,6 @@ chmod ugo+x "$LFS/sources/$DIRNAME/insidechroot.sh"
 sudo "$LFS/sources/$DIRNAME/preparechroot.sh" "$LFS"
 
 echo "ENTERING CHROOT ENVIRONMENT"
-sleep 3
 
 sudo chroot "$LFS" /usr/bin/env -i   \
     HOME=/root                  \

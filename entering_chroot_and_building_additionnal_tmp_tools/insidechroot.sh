@@ -73,10 +73,10 @@ echo "tester:x:101:" >> /etc/group
 install -o tester -d /home/tester
 
 
-exec /usr/bin/bash --login
-
-
 touch /var/log/{btmp,lastlog,faillog,wtmp}
 chgrp -v utmp /var/log/lastlog
 chmod -v 664  /var/log/lastlog
 chmod -v 600  /var/log/btmp
+
+
+source /sources/entering_chroot_and_building_additionnal_tmp_tools/install_additionnal_tmp_tools.sh

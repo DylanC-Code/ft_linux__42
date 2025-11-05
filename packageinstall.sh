@@ -3,6 +3,7 @@
 DIRECTORY=$1
 PACKAGE=$2
 
+echo "Installing package '$PACKAGE' from directory '$DIRECTORY'..."
 
 cat "$LFS/sources/packages.csv" | grep -i "^$PACKAGE;" | grep -i -v "\.patch;" | while read line; do
     export VERSION="`echo $line | cut -d\; -f2`"
